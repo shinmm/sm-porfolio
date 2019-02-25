@@ -1547,7 +1547,6 @@ input, select, textarea {
 
 		ol li {
 			padding-left: 1.25em;
-			margin-top: 1.5em;
 		}
 
 /* Icons */
@@ -2119,6 +2118,36 @@ input, select, textarea {
 				border-bottom-color: rgba(255, 255, 255, 0);
 			}
 
+
+.custom-counter {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 40px;
+	column-gap: 40px;
+	-moz-column-gap: 40px;
+}
+
+.custom-counter li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+}
+
+.custom-counter li::before {
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: rgb(0,200,200);
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+
 /* Footer */
 
 	#footer {
@@ -2468,6 +2497,7 @@ input, select, textarea {
 				display: block;
 				padding: 0;
 				border: 0;
+
 				margin: 1em 0 0 0;
 			}
 
